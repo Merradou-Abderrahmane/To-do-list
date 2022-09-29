@@ -1,15 +1,15 @@
 <?php
 
-require_once "database/studentDal.php";
+require_once "buisness/studentBll.php";
     
-    $StudentDal = new studentDal();
+    $StudentBal = new studentBll();
 
 if(!empty($_POST)){
 	$student = new student();
 	$student->setName($_POST['name']);
 	$student->setEmail($_POST['email']);
 	$student->setDateOfBirth($_POST['dateOfBirth']);
-	$StudentDal->addStudent($student);
+	$StudentBal->addStudent($student);
 	
 	// redirect to index.php
 }

@@ -7,7 +7,7 @@ class studentDal extends Connection {
     public function addStudent($student){
 
         $name = $student->getName();
-        $email = $student->getDateOfBirth();
+        $email = $student->getEmail();
         $dateOfBirth = $student->getDateOfBirth();
         // Sql query
         $insertRow="INSERT INTO student (Name, Email, DateOfBirth) 
